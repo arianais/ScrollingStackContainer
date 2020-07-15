@@ -155,7 +155,7 @@ public class ScrollingStackController: UIViewController, UIScrollViewDelegate {
 	/// This function remove all view controllers from the stack
 	private func removeAllViewControllers() {
 		self.items.forEach {
-			$0.controller.removeFromParentViewController()
+            $0.controller.removeFromParent()
 			$0.controller.view.removeFromSuperview()
 		}
 		self.items.removeAll()
